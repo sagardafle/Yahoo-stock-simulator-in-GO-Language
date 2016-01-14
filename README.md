@@ -14,9 +14,11 @@ Server: The trading engine will have JSON-RPC interface for the below features.
 
                 “stockSymbolAndPercentage”: string (E.g. “GOOG: 50%, YHOO: 50 %”)
                                   “budget”: float32
+                                  
 2)	Response
 -	Server then allocates the stock to the user after performing some validations. 
 -	It return a tradeID, the unvested (leftover) amount and the stock details that include: Stock symbol, no of stocks purchased for that stock and the price at which the stock was bought. 
+-	
                                       “tradeId”: number
              “stocks”: string (E.g. “GOOG: 100:$500.25”, “YHOO: 200:$31.40”)
                                   “unvestedAmount”: float32
@@ -26,11 +28,13 @@ Server: The trading engine will have JSON-RPC interface for the below features.
 1)	Request
 -	User can check the portfolio to see if the current price of the stocks and to figure out if the previous transaction were a profit or loss.
 -	User only inputs the tradeId that was previously allocated to earlier transaction(s).
+-	
                                   “tradeId”: number
 
 2)	Response
 -	User gets the details of the stocks that were purchased w.r.t the tradeId as provided. 
 -	The details also include the (+) Profit or (-) Loss symbol that compares the current price of the stocks to earlier one along with the unvested amount.
-              “stocks”: string (E.g. “GOOG:100:+$520.25”, “YHOO:200:-$30.40”)
+
+                  “stocks”: string (E.g. “GOOG:100:+$520.25”, “YHOO:200:-$30.40”)
                               “currentMarketValue” : float32
                                “unvestedAmount”: float32
