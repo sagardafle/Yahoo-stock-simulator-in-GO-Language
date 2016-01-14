@@ -1,4 +1,4 @@
-Yahoo stock simulator in GO Language
+**Yahoo stock simulator in GO Language**
 
 I have built a virtual stock trading system for whoever wants to learn how to invest in stocks.
 The system uses real-time pricing via Yahoo finance API and supports USD currency only. 
@@ -6,7 +6,7 @@ The system will have 2 components: Client and Server.
 Client: The JSON-RPC client will take command line input and send requests to the server.
 Server: The trading engine will have JSON-RPC interface for the below features.
 
-Feature #1: 
+*Feature #1:* 
 Buying stock: 
 A)	Request
 •	User requests the server to buy stocks by giving the stock symbol and the percent of the budget he wants to invest in that stock.
@@ -20,7 +20,8 @@ B)	Response
      “tradeId”: number
      “stocks”: string (E.g. “GOOG: 100:$500.25”, “YHOO: 200:$31.40”)
                  “unvestedAmount”: float32
-Feature #2: 
+
+*Feature #2:* 
 Check portfolio (Loss/Gain): 
 A)	Request
 •	User can check the portfolio to see if the current price of the stocks and to figure out if the previous transaction were a profit or loss.
@@ -28,7 +29,8 @@ A)	Request
              “tradeId”: number
 
 B)	Response
-•	User gets the details of the stocks that were purchased w.r.t the tradeId as provided. The details also include the (+) Profit or (-) Loss symbol that compares the current price of the stocks to earlier one along with the unvested amount.
+•	User gets the details of the stocks that were purchased w.r.t the tradeId as provided. 
+•	The details also include the (+) Profit or (-) Loss symbol that compares the current price of the stocks to earlier one along with the unvested amount.
 “stocks”: string (E.g. “GOOG:100:+$520.25”, “YHOO:200:-$30.40”)
 “currentMarketValue” : float32
     “unvestedAmount”: float32
