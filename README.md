@@ -6,7 +6,7 @@ The system will have 2 components: Client and Server.
 Client: The *JSON-RPC* client will take command line input and send requests to the server.
 Server: The trading engine will have JSON-RPC interface for the below features.
 
-**Feature #1: Buying stock **
+**Feature #1: Buying stock**
 
 1)	Request
 -	User requests the server to buy stocks by giving the stock symbol and the percent of the budget he wants to invest in that stock.
@@ -23,7 +23,7 @@ Server: The trading engine will have JSON-RPC interface for the below features.
              “stocks”: string (E.g. “GOOG: 100:$500.25”, “YHOO: 200:$31.40”)
                                   “unvestedAmount”: float32
 
-**Feature #2: Check portfolio (Loss/Gain) **
+**Feature #2: Check portfolio (Loss/Gain)**
  
 1)	Request
 -	User can check the portfolio to see if the current price of the stocks and to figure out if the previous transaction were a profit or loss.
